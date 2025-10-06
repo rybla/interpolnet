@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractal Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html">Back to Home</a>
+        <h1>Fractal Visualizer</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <label for="fractal-select">Choose a fractal:</label>
+            <select id="fractal-select">
+                <option value="mandelbrot">Mandelbrot Set</option>
+                <option value="julia">Julia Set</option>
+                <option value="fern">Barnsley Fern</option>
+                <option value="koch">Koch Snowflake</option>
+                <option value="sierpinski">Sierpinski Triangle</option>
+                <option value="dragon">Dragon Curve</option>
+            </select>
+            <label for="depth-slider">Depth:</label>
+            <input type="range" id="depth-slider" min="1" max="15" value="8">
+            <label for="speed-slider">Speed:</label>
+            <input type="range" id="speed-slider" min="1" max="10" value="5">
+        </div>
+        <canvas id="fractal-canvas" width="800" height="600"></canvas>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
