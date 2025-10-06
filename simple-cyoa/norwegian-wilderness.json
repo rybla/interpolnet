@@ -1,0 +1,101 @@
+{
+    "title": "The Whisper of the Fjord",
+    "scenes": {
+        "start": {
+            "text": "The crisp Norwegian air fills your lungs, smelling of pine and damp earth. For weeks, you've followed local legends of the 'Hjertet av Fjellet'—the Heart of the Mountain—a treasure said to hold the very essence of the wilderness. You now stand at a crossroads in an ancient, mist-shrouded forest. Before you lies a well-trodden path winding gently into the trees. To your right, a barely-visible game trail cuts sharply through the dense, mossy undergrowth, from which you hear a faint, rhythmic pulsing, like a slow heartbeat.",
+            "choices": [
+                { "text": "Follow the well-trodden path.", "next": "troddenPath" },
+                { "text": "Follow the faint, pulsing sound down the game trail.", "next": "gameTrail" }
+            ]
+        },
+        "troddenPath": {
+            "text": "The path is easy to follow, but you feel a sense of being watched. After an hour, you arrive at the bank of a wide, powerful river, its icy water churning over smooth stones. The path ends here. Across the river, you can see the trail continuing towards the mountain. You'll need to find a way to cross.",
+            "choices": [
+                { "text": "Search for a fallen tree to use as a bridge.", "next": "logBridge" },
+                { "text": "Follow the river upstream to find a safer crossing.", "next": "upstream" }
+            ]
+        },
+        "gameTrail": {
+            "text": "You push through thorny bushes and thick ferns, the strange pulsing growing stronger. The trail leads you to the edge of a deep chasm. A single, ancient rope bridge, frayed and weathered, spans the gap. The chasm floor is lost in shadow, and a strong wind whistles through it, making the bridge sway ominously.",
+            "choices": [
+                { "text": "Risk crossing the rickety rope bridge.", "next": "ropeBridge" },
+                { "text": "Search for a safer way to cross the chasm.", "next": "findAnotherWay" }
+            ]
+        },
+        "logBridge": {
+            "text": "You find a massive fallen pine tree spanning the river. It's slippery with moss, and the roaring water below is dizzying. With careful, deliberate steps, you make it to the other side. As you step onto the bank, you hear a low growl. A large brown bear, drawn by the scent of your rations, stands just a few yards away.",
+            "choices": [
+                { "text": "Try to scare the bear away by making noise.", "next": "scareBear" },
+                { "text": "Slowly back away and drop some of your food as a distraction.", "next": "distractBear" }
+            ]
+        },
+        "upstream": {
+            "text": "You spend nearly two hours hiking upstream. The terrain is difficult, and you have to backtrack several times. Finally, you find a spot where the river narrows and is shallow enough to wade across. The water is freezing, and you stumble on a slick rock, soaking your pack and all your supplies. You are cold and your gear is waterlogged, but you are across.",
+            "choices": [
+                { "text": "Press on towards the mountain, despite being cold and wet.", "next": "pressOnCold" },
+                { "text": "Stop to build a fire and dry your gear.", "next": "buildFire" }
+            ]
+        },
+        "ropeBridge": {
+            "text": "Your heart pounds with every step. The wind howls, and the ropes groan under your weight. Just as you leap onto the far side, you hear a sharp crack. The main support rope snaps, and the bridge plunges into the chasm behind you. There's no turning back now. Before you is the dark entrance to a cave, from which the pulsing sound emanates clearly.",
+            "choices": [
+                { "text": "Enter the cave.", "next": "caveEntrance" }
+            ]
+        },
+        "findAnotherWay": {
+            "text": "You decide the bridge is too risky. You follow the chasm's edge for miles. The sun begins to set, casting long, deep shadows. You've wasted the entire day and are no closer to the mountain. As darkness falls, you realize you are hopelessly lost.",
+            "choices": [
+                { "text": "Your adventure ends here, lost in the wilderness. Play Again?", "next": "start" }
+            ]
+        },
+        "scareBear": {
+            "text": "You shout and wave your arms, trying to look as large as possible. The bear is startled for a moment, but then it lets out a deafening roar and charges. It was a mistake to challenge a territorial predator.",
+            "choices": [
+                { "text": "Your adventure ends here. Play Again?", "next": "start" }
+            ]
+        },
+        "distractBear": {
+            "text": "You cautiously drop your satchel of dried meat and back away. The bear sniffs at the offering, momentarily forgetting you. You use the chance to slip away into the forest, your heart racing. You are safe, but you've lost a significant portion of your food.",
+            "choices": [
+                { "text": "Continue your journey with fewer supplies.", "next": "caveEntrance" }
+            ]
+        },
+        "pressOnCold": {
+            "text": "You push onward, shivering. The cold seeps into your bones. As night falls, your strength gives out. You collapse from exhaustion and hypothermia, the Heart of the Mountain remaining a legend.",
+            "choices": [
+                { "text": "Your adventure ends here. Play Again?", "next": "start" }
+            ]
+        },
+        "buildFire": {
+            "text": "You find a sheltered spot and manage to start a fire with your remaining dry tinder. You spend hours drying your clothes and gear, restoring your warmth and spirits. Though you've lost time, you are ready to continue. As you pack up, you notice a series of old, carved steps leading up the mountainside nearby—a hidden path.",
+            "choices": [
+                { "text": "Follow the hidden stone steps.", "next": "caveEntrance" }
+            ]
+        },
+        "caveEntrance": {
+            "text": "All paths have led you here, to the base of the mountain. You stand before a dark cave entrance. A faint, ethereal glow pulses from within, matching the rhythm you've been following. The air here is ancient and still. You take a deep breath and step into the darkness.",
+            "choices": [
+                { "text": "Proceed into the Heart of the Mountain.", "next": "heartOfTheMountain" }
+            ]
+        },
+        "heartOfTheMountain": {
+            "text": "The cave opens into a vast, crystalline cavern. In the center, floating just above the ground, is a large, glowing stone—the Heart of the Mountain. It pulses with a soft, warm light, and the air hums with its power. As you approach, you feel a sense of profound peace and connection to the wild.",
+            "choices": [
+                { "text": "Take the Heart of the Mountain.", "next": "endingTake" },
+                { "text": "Leave the Heart in its place.", "next": "endingLeave" }
+            ]
+        },
+        "endingTake": {
+            "text": "You reach out and take the stone. It's warm to the touch. As your fingers close around it, the light fades, and the cavern grows cold and dark. The pulsing stops. You have your treasure, but you feel a deep sense of loss, as if you've stolen the very soul of the wilderness. You leave the mountain, a wealthy but empty person.",
+            "choices": [
+                { "text": "The End. Play Again?", "next": "start" }
+            ]
+        },
+        "endingLeave": {
+            "text": "You decide that such beauty and power should not be disturbed. You give a respectful nod, turn, and walk away. As you exit the cave, you feel a new vitality in your step. You carry no treasure, but you are filled with a profound sense of peace and respect for the natural world. The wilderness itself is the real treasure.",
+            "choices": [
+                { "text": "The End. Play Again?", "next": "start" }
+            ]
+        }
+    }
+}

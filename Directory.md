@@ -30,3 +30,8 @@ A tool for visualizing various fractals with adjustable parameters.
 Path: `falling-sand/`
 
 A falling-sand style simulator.
+## Simple Choose Your Own Adventure
+
+Path: `simple-cyoa/`
+
+A simple choose your own adventure game with a slick UI.

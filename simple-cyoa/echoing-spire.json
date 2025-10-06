@@ -1,0 +1,140 @@
+{
+    "title": "The Echoing Spire",
+    "scenes": {
+        "start": {
+            "text": "The autumn air is sharp and cold. For weeks, you have followed the whispers on the wind and the cryptic maps of forgotten cartographers. Now, you stand before your prize: The Echoing Spire. Legends claim it is a place outside of time, a living monument of a long-dead civilization, and that its heart holds a power that can reshape the world. It is only under the light of tonight's twin moons that the entrance reveals itself. Before you, the path splits. A grand, crumbling staircase leads directly to the main gate, which glows with a faint, inviting light. To its left, a narrow, winding track disappears into the shadows at the tower's base, marked by a single, moss-covered stone.",
+            "choices": [
+                { "text": "[1] Take the grand staircase.", "next": "grandStaircase" },
+                { "text": "[2] Follow the winding path.", "next": "windingPath" }
+            ]
+        },
+        "grandStaircase": {
+            "text": "Each step you take on the ancient stone staircase feels heavy with the weight of ages. The immense, rune-etched doors of the Spire stand slightly ajar, emitting a faint, pulsating blue light. A low, grinding sound, like stone on stone, echoes from the darkness within.",
+            "choices": [
+                { "text": "[1.1] \"Strength is the only key I need.\" (Push the heavy doors open and enter.)", "next": "pushDoors" },
+                { "text": "[1.2] \"A cautious mind is a sharp sword.\" (Peer through the crack between the doors.)", "next": "peerThrough" }
+            ]
+        },
+        "pushDoors": {
+            "text": "With a thunderous groan, the doors swing inward. You step into a vast chamber, the Hall of Whispers. In the center of the room, a hulking Golem of obsidian and crystal awakens, its eyes glowing with a menacing red. It turns its massive head towards you, ready to defend the Spire.",
+            "choices": [
+                { "text": "Fight the Golem.", "next": "fightGolem" },
+                { "text": "Try to outwit the Golem.", "next": "outwitGolem" },
+                { "text": "Flee!", "next": "fleeToWindingPath" }
+            ]
+        },
+        "peerThrough": {
+            "text": "You press your eye to the opening and scan the room. You spot the dormant Golem, a silent sentinel in the gloom. You notice a series of pressure plates on the floor around it, but also a narrow ledge along the wall that might allow you to sneak past undetected.",
+            "choices": [
+                { "text": "Sneak past the Golem along the ledge.", "next": "sneakPast" },
+                { "text": "Retreat and take the Winding Path instead.", "next": "windingPath" }
+            ]
+        },
+        "windingPath": {
+            "text": "The winding path takes you through gnarled, ancient trees that seem to drink the moonlight. You arrive at a small, moss-covered door with no handle, only a single, unlit crystal set in its center. A riddle is carved into the stone archway above it: 'I have cities, but no houses. I have mountains, but no trees. I have water, but no fish. What am I?'",
+            "choices": [
+                { "text": "Speak the answer: \"A map.\"", "next": "riddleCorrect" },
+                { "text": "Try to force the door open.", "next": "forceDoor" }
+            ]
+        },
+        "riddleCorrect": {
+            "text": "The word hangs in the air for a moment, and the crystal before you glows with a soft, silver light. With a click, the stone door silently slides open, revealing a spiral staircase descending into the earth.",
+            "choices": [
+                { "text": "Descend into the Chamber of Starlight.", "next": "chamberOfStarlight" }
+            ]
+        },
+        "forceDoor": {
+            "text": "You put your shoulder to the door, but it's like pushing against a mountain. The stone is unyielding. Worse, your efforts cause the crystal to flash a brief, angry red. You hear a distant, heavy scraping from within the Spire—you have alerted something to your presence.",
+            "choices": [
+                { "text": "Return and take the Grand Staircase (the Golem is now active).", "next": "pushDoors" }
+            ]
+        },
+        "fightGolem": {
+            "text": "You charge the Golem, your weapon drawn. It is a foolish and brave attack. The Golem's crystalline fist smashes down, and your adventure ends here.",
+            "choices": [
+                { "text": "Start Over", "next": "start"}
+            ]
+        },
+        "outwitGolem": {
+            "text": "You feint an attack to one side, then dodge as the Golem swings. You spot a loose pile of rocks on a ledge above. A well-aimed throw could bring them down on the Golem's head.",
+            "choices": [
+                { "text": "Throw a rock to create a distraction.", "next": "hallOfWhispers" }
+            ]
+        },
+        "fleeToWindingPath": {
+            "text": "You turn and run, the Golem's heavy footsteps shaking the ground behind you. You scramble back down the staircase and take the winding path, your heart pounding in your chest.",
+            "choices": [
+                { "text": "Continue to the winding path.", "next": "windingPath" }
+            ]
+        },
+        "sneakPast": {
+            "text": "You move with the silence of a shadow, your back to the cold stone wall. The Golem remains still. You make it to the other side of the chamber, your heart pounding. You have reached the far side of the Hall of Whispers.",
+            "choices": [
+                { "text": "Proceed into the Hall of Whispers.", "next": "hallOfWhispers" }
+            ]
+        },
+        "hallOfWhispers": {
+            "text": "You are in a cavernous hall lined with statues of forgotten kings and queens. Their stone eyes seem to follow you. Whispers slither from the shadows, promises of power and warnings of despair. At the far end of the hall, a shimmering curtain of emerald energy blocks a massive doorway. In the center of the room is a pedestal with three sculpted symbols: a Sun, a Moon, and a Star.",
+            "choices": [
+                { "text": "Press the symbols: Moon, Sun, Star.", "next": "puzzleSolved" },
+                { "text": "Press the symbols: Sun, Moon, Star.", "next": "puzzleFailed" }
+            ]
+        },
+        "puzzleSolved": {
+            "text": "As you press the symbols in the correct order, the emerald curtain dissolves with a soft chime, revealing the path to the Heart of the Spire.",
+            "choices": [
+                { "text": "Enter the Heart of the Spire.", "next": "heartOfTheSpire" }
+            ]
+        },
+        "puzzleFailed": {
+            "text": "A chilling shriek fills the hall as you press the wrong sequence. Hostile, whispering wraiths emerge from the shadows and swarm you. Your journey ends in darkness.",
+            "choices": [
+                { "text": "Start Over", "next": "start"}
+            ]
+        },
+        "chamberOfStarlight": {
+            "text": "The staircase leads you down into a breathtaking circular chamber. The domed ceiling is a perfect replica of the night sky, with constellations glittering with real light. In the center of the room, a beam of moonlight shines down from an unseen source, hitting a single, rotatable crystal pedestal.",
+            "choices": [
+                { "text": "Align the light with 'The Key' constellation.", "next": "keyAligned" },
+                { "text": "Align the light with 'The Sentinel' constellation.", "next": "sentinelAligned" }
+            ]
+        },
+        "keyAligned": {
+            "text": "You rotate the crystal, and the beam of light aligns with a constellation shaped like an ornate key. A section of the wall grinds open, revealing a hidden passage to the Heart of the Spire.",
+            "choices": [
+                { "text": "Enter the Heart of the Spire.", "next": "heartOfTheSpire" }
+            ]
+        },
+        "sentinelAligned": {
+            "text": "You align the light with a constellation resembling the Golem. You hear a distant click and a low hum from above. The Golem has been deactivated. This might make a return trip safer.",
+            "choices": [
+                { "text": "Now align the light with 'The Key' constellation.", "next": "keyAligned" }
+            ]
+        },
+        "heartOfTheSpire": {
+            "text": "All paths lead here. You step into the central chamber of the Spire, a place of impossible geometry. A colossal, pulsating crystal, the Source, floats in the center, resonating with a silent, overwhelming power that makes the air thrum. As you approach, a spectral figure, the Warden, materializes from the crystal's light. Its form is indistinct, its voice echoing not in your ears, but in your mind. 'You have come far, Seeker. The Heart of the Spire can unmake what is made, reveal what is hidden, or grant a fraction of its own life. Its power is a torrent, and you are but a cup. State your purpose. Why are you here?'",
+            "choices": [
+                { "text": "[A] \"I seek the power to protect others and bring peace to the land.\"", "next": "endingA" },
+                { "text": "[B] \"I want the knowledge this Spire has accumulated through the ages.\"", "next": "endingB" },
+                { "text": "[C] \"This power is a tool, and I am the one meant to wield it.\"", "next": "endingC" },
+                { "text": "[D] \"I was merely curious. I will leave this place in peace.\"", "next": "endingD" }
+            ]
+        },
+        "endingA": {
+            "text": "'A noble heart is a rare vessel,' the Warden communicates. 'One that will not shatter.' It gestures, and a shard of the Source breaks off and floats into your hand, glowing with a warm, protective light. You feel its energy infuse you, not with destructive force, but with resilience and wisdom. The Warden shows you a path to the surface. You leave the Spire, its greatest power intact, but you carry with you a gift that will allow you to become a true guardian of your people.",
+            "choices": [{ "text": "The End. Play Again?", "next": "start" }]
+        },
+        "endingB": {
+            "text": "'Knowledge is a worthy pursuit, though it carries its own burdens,' the Warden says. It gestures to the Source, and visions flood your mind—the birth of stars, the rise and fall of empires, secrets of magic long lost. The experience is overwhelming but enlightening. You are gently expelled from the Spire, your mind brimming with arcane lore, but the physical power remains locked away. You become a sage of great renown, but the echoes of all you've seen haunt your dreams forever.",
+            "choices": [{ "text": "The End. Play Again?", "next": "start" }]
+        },
+        "endingC": {
+            "text": "'Arrogance,' the Warden hisses in your mind. 'You see a tool, but the Spire sees a new component.' The Warden dissolves as the Source crystal flares violently. You reach out, and immense, untamed energy surges into you. It is too much. Your body is torn apart by the raw power, ending your story in a flash of light...",
+            "choices": [{ "text": "The End. Play Again?", "next": "start" }]
+        },
+        "endingD": {
+            "text": "'Wisdom,' the Warden communicates, with a hint of what feels like surprise. 'Few who come this far are willing to walk away with empty hands, not realizing that their life is the real treasure.' The chamber fades, and you find yourself standing outside the Spire, the twin moons shining on your face. The entrance is gone. You have no treasure, no great power, but you have a story few will ever believe and the quiet satisfaction of knowing you faced the ultimate test and chose yourself. Sometimes, the greatest adventure is knowing when to turn back.",
+            "choices": [{ "text": "The End. Play Again?", "next": "start" }]
+        }
+    }
+}

@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --primary-color: #1a0a2a;
+    --secondary-color: #3a1a5a;
+    --accent-color: #9a4a9a;
+    --text-color: #f0e8f8;
+    --glow-color: #e0b0ff;
+    --rune-glow: #00ffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: radial-gradient(circle, var(--secondary-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: background-pan 60s linear infinite;
+}
+
+@keyframes background-pan {
+    from { background-position: 0 0; }
+    to { background-position: 1200px 1200px; }
+}
+
+header, main, footer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+header {
+    animation: fade-in-down 1s ease-out;
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
+    letter-spacing: 0.1em;
+    animation: text-flicker 5s infinite alternate;
+}
+
+@keyframes text-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+            0 0 4px var(--glow-color),
+            0 0 11px var(--glow-color),
+            0 0 19px var(--glow-color),
+            0 0 40px var(--accent-color),
+            0 0 80px var(--accent-color),
+            0 0 90px var(--accent-color),
+            0 0 100px var(--accent-color),
+            0 0 150px var(--accent-color);
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'Cinzel', serif;
+    color: var(--accent-color);
+    text-decoration: none;
+    border: 1px solid var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+.back-link:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 15px var(--glow-color);
+    transform: translateY(-2px);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#story-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    animation: content-appear 1.5s ease-out;
+}
+
+#story-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    opacity: 0;
+    animation: text-fade-in 1s forwards;
+}
+
+#choices-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: content-appear 1.5s ease-out 0.5s backwards;
+}
+
+.choice-button {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--accent-color);
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    opacity: 0;
+    animation: choice-appear 0.5s forwards;
+}
+
+.choice-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(154, 74, 154, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease;
+    z-index: -1;
+}
+
+.choice-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.choice-button:hover {
+    color: var(--glow-color);
+    border-color: var(--glow-color);
+    box-shadow: 0 0 15px var(--accent-color);
+    transform: scale(1.02);
+}
+
+#story-selector-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    animation: fade-in-down 1s ease-out 0.2s backwards;
+}
+
+#story-selector, #load-story {
+    font-family: 'Cinzel', serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#story-selector:focus, #load-story:focus {
+    outline: none;
+    box-shadow: 0 0 10px var(--glow-color);
+}
+
+#load-story {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#load-story:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 15px var(--glow-color);
+}
+
+footer {
+    font-family: 'Cinzel', serif;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    padding: 1rem;
+    animation: fade-in-up 1s ease-out 1s backwards;
+}
+
+/* Animations */
+@keyframes fade-in-down {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes content-appear {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes text-fade-in {
+    to { opacity: 1; }
+}
+
+@keyframes text-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes choice-appear {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header, main, footer {
+        padding: 1rem;
+    }
+
+    #story-text {
+        font-size: 1.1rem;
+    }
+
+    .choice-button {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
