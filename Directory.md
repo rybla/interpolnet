@@ -19,3 +19,9 @@ A simulator for simple 2D particle physics.
 Path: `color-scheme-designer/`
 
 A UI for designing and previewing custom color schemes.
+
+## Simple Choose Your Own Adventure
+
+Path: `simple-cyoa/`
+
+A simple choose your own adventure game with a slick UI.
