@@ -19,3 +19,9 @@ A simulator for simple 2D particle physics.
 Path: `color-scheme-designer/`
 
 A UI for designing and previewing custom color schemes.
+
+## Fractal Visualizer
+
+Path: `fractal-visualizer/`
+
+A tool for visualizing various fractals with adjustable parameters.
