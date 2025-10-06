@@ -25,3 +25,8 @@ A UI for designing and previewing custom color schemes.
 Path: `fractal-visualizer/`
 
 A tool for visualizing various fractals with adjustable parameters.
+## Falling Sand Simulator
+
+Path: `falling-sand/`
+
+A falling-sand style simulator.
