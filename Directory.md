@@ -19,3 +19,9 @@ A simulator for simple 2D particle physics.
 Path: `color-scheme-designer/`
 
 A UI for designing and previewing custom color schemes.
+
+## Falling Sand Simulator
+
+Path: `falling-sand/`
+
+A falling-sand style simulator.

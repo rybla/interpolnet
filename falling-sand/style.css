@@ -1,0 +1,94 @@
+body {
+  font-family: sans-serif;
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  padding: 1rem;
+  background-color: #2c2c2c;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+.back-link {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #ffffff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.controls {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+button {
+  background-color: #444;
+  color: #f0f0f0;
+  border: 1px solid #666;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #555;
+  border-color: #888;
+}
+
+button.active {
+  background-color: #007bff;
+  border-color: #0056b3;
+}
+
+#sandbox {
+  border: 2px solid #444;
+  background-color: #000;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .back-link {
+    position: static;
+    display: block;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+}
