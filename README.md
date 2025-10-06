@@ -14,3 +14,4 @@ Each webpage MUST follow these critical rules:
 - Each webpage must have an entry in `Directory.md`.
 - Each webpage's `index.html` and all of its assets (images, CSS files, JS files, HTML files, etc) must be placed into a single subdirectory of this repository's root director.y
 - Each webpage must have an `index.html` in its subdirectory.
+- Each webpage must include a link back to the root of the website
