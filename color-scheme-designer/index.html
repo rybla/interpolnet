@@ -4,16 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interpolnet | Color Scheme Designer</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <header>
+      <a href="../index.html" class="back-link">← Back to Home</a>
       <h1>Color Scheme Designer</h1>
     </header>
     <main>
-      <!-- TODO -->
+      <section class="color-picker-section">
+        <input type="color" id="color-picker" value="#F55A5A" />
+        <select id="color-scheme-mode">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-complement</option>
+          <option value="triad">Triad</option>
+          <option value="quad">Quad</option>
+        </select>
+        <button id="get-scheme-btn">Get color scheme</button>
+      </section>
+      <section id="color-scheme-display"></section>
     </main>
     <footer>
       <p>&copy; 2025 Interpolnet</p>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
