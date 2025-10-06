@@ -4,16 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interpolnet | Particle Simulator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>Particle Simulator</h1>
     </header>
     <main>
-      <!-- TODO -->
+      <div id="controls">
+        <div class="control-group">
+            <label for="particle-count">Count:</label>
+            <input type="range" id="particle-count" min="50" max="500" value="100" />
+            <span id="count-display">100</span>
+        </div>
+        <div class="control-group">
+            <label for="particle-size">Size:</label>
+            <input type="range" id="particle-size" min="1" max="10" value="3" />
+            <span id="size-display">3</span>
+        </div>
+        <div class="control-group">
+            <label for="speed-control">Speed:</label>
+            <input type="range" id="speed-control" min="0.1" max="5" step="0.1" value="1" />
+            <span id="speed-display">1.0x</span>
+        </div>
+        <button id="restart-button">Restart</button>
+        <div class="control-group">
+            <label for="shape-select">Shape:</label>
+            <select id="shape-select">
+                <option value="circle">Circle</option>
+                <option value="square">Square</option>
+                <option value="triangle">Triangle</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="diffusion-slider">Diffusion:</label>
+            <input type="range" id="diffusion-slider" min="0" max="1" step="0.1" value="0" />
+            <span id="diffusion-display">0.0</span>
+        </div>
+        <div class="control-group">
+            <label for="decay-select">Decay:</label>
+            <select id="decay-select">
+                <option value="none">None</option>
+                <option value="linear">Linear</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="bounce-toggle">Bounce:</label>
+            <input type="checkbox" id="bounce-toggle" checked />
+        </div>
+      </div>
+      <canvas id="particle-canvas"></canvas>
     </main>
     <footer>
-      <p>&copy; 2025 Interpolnet</p>
+      <p>&copy; 2025 Interpolnet. <a href="../">Back to home</a></p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
