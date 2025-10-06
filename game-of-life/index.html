@@ -4,16 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interpolnet | Game of Life</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>Game of Life</h1>
     </header>
     <main>
-      <!-- TODO -->
+      <canvas id="game-of-life-canvas"></canvas>
+      <div class="controls">
+        <button id="start-button">Start</button>
+        <button id="stop-button">Stop</button>
+        <button id="clear-button">Clear</button>
+        <button id="random-button">Random</button>
+      </div>
+      <div class="speed-control">
+        <label for="speed-slider">Speed:</label>
+        <input type="range" id="speed-slider" min="1" max="1000" value="950">
+      </div>
     </main>
     <footer>
       <p>&copy; 2025 Interpolnet</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
