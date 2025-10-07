@@ -30,3 +30,9 @@ A tool for visualizing various fractals with adjustable parameters.
 Path: `falling-sand/`
 
 A falling-sand style simulator.
+
+## Lambda Calculus Visualization
+
+Path: `lambda-calculus-visualization/`
+
+A tool for visualizing lambda calculus reductions.
