@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L-System Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html">Back to Home</a>
+        <h1>L-System Visualizer</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <label for="l-system-select">Choose a preset:</label>
+            <select id="l-system-select">
+                <option value="sierpinski">Sierpinski Triangle</option>
+                <option value="koch">Koch Snowflake</option>
+                <option value="dragon">Dragon Curve</option>
+                <option value="plant">Fractal Plant</option>
+            </select>
+            <button id="start-button">Start</button>
+            <button id="step-button">Step</button>
+        </div>
+        <canvas id="l-system-canvas" width="800" height="600"></canvas>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
