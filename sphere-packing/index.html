@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interpolnet | Sphere Packing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../index.html" class="back-link">← Back to Home</a>
+      <h1>Sphere Packing</h1>
+    </header>
+    <main>
+      <div id="container"></div>
+      <div id="controls">
+        <h2>Controls</h2>
+        <div class="control-row">
+          <label for="algorithm">Algorithm:</label>
+          <select id="algorithm">
+            <option value="random">Random</option>
+            <option value="fcc">Face-Centered Cubic (FCC)</option>
+            <option value="hcp">Hexagonal Close-Packed (HCP)</option>
+          </select>
+        </div>
+        <div class="control-row">
+            <label for="numSpheres">Number of Spheres:</label>
+            <input type="range" id="numSpheres" min="10" max="500" value="100">
+            <span id="numSpheresValue">100</span>
+        </div>
+        <div class="control-row">
+            <label for="sphereSize">Sphere Size:</label>
+            <input type="range" id="sphereSize" min="0.1" max="2" value="0.5" step="0.1">
+            <span id="sphereSizeValue">0.5</span>
+        </div>
+        <div class="control-row">
+            <label for="animationSpeed">Animation Speed:</label>
+            <input type="range" id="animationSpeed" min="0" max="10" value="1" step="0.1">
+            <span id="animationSpeedValue">1</span>
+        </div>
+        <button id="reset-btn">Reset</button>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Interpolnet</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

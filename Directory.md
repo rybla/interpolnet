@@ -25,6 +25,13 @@ A UI for designing and previewing custom color schemes.
 Path: `fractal-visualizer/`
 
 A tool for visualizing various fractals with adjustable parameters.
+
+## Sphere Packing Simulator
+
+Path: `sphere-packing/`
+
+A 3D visualization of sphere packing algorithms.
+
 ## Falling Sand Simulator
 
 Path: `falling-sand/`
