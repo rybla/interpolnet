@@ -42,3 +42,9 @@ A falling-sand style simulator.
 Path: `simple-cyoa/`
 
 A simple choose your own adventure game with a slick UI.
+
+## Ant Colony Simulation
+
+Path: `ants/`
+
+A simulation of an ant colony finding the shortest path to food using pheromones.
