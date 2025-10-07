@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ant Colony Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ant Colony Simulation</h1>
+        <a href="../index.html">Back to Home</a>
+    </header>
+    <main>
+        <div id="controls">
+            <h2>Controls</h2>
+            <div>
+                <label for="ant-count">Ant Count:</label>
+                <input type="range" id="ant-count" min="1" max="200" value="50">
+                <span id="ant-count-value">50</span>
+            </div>
+            <div>
+                <label for="evaporation-rate">Evaporation Rate:</label>
+                <input type="range" id="evaporation-rate" min="0.9" max="0.999" step="0.001" value="0.99">
+                <span id="evaporation-rate-value">0.99</span>
+            </div>
+             <div>
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="1" max="5" value="1">
+                <span id="speed-value">1</span>
+            </div>
+            <button id="restart-btn">Restart Simulation</button>
+        </div>
+        <canvas id="simulation-canvas"></canvas>
+    </main>
+    <script src="simulation.js"></script>
+</body>
+</html>
