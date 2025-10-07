@@ -48,3 +48,9 @@ A simple choose your own adventure game with a slick UI.
 Path: `ants/`
 
 A simulation of an ant colony finding the shortest path to food using pheromones.
+
+## Lambda Calculus Visualization
+
+Path: `lambda-calculus-visualization/`
+
+A tool for visualizing lambda calculus reductions.
