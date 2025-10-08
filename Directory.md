@@ -65,3 +65,8 @@ An interactive visualization of the Mistborn magic system (Allomancy).
 Path: `fsm-visualizer/`
 
 A tool for visualizing finite state machines.
+## L-System Visualizer
+
+Path: `l-system/`
+
+A tool for visualizing the generation of L-systems with multiple presets.
