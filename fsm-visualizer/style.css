@@ -123,7 +123,7 @@ select:hover, button:hover {
     background-color: rgba(0,0,0,0.2);
     border-radius: 5px;
     border: 1px solid #8b4513;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s ease;
     text-align: center;
 }
 
@@ -131,4 +131,5 @@ select:hover, button:hover {
     background-color: #a0522d;
     color: #fff;
     font-weight: bold;
+    transform: scale(1.1);
 }
