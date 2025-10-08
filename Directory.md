@@ -54,3 +54,9 @@ A simulation of an ant colony finding the shortest path to food using pheromones
 Path: `lambda-calculus-visualization/`
 
 A tool for visualizing lambda calculus reductions.
+
+## Finite State Machine Visualizer
+
+Path: `fsm-visualizer/`
+
+A tool for visualizing finite state machines.
