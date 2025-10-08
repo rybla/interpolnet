@@ -1,0 +1,117 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0d0d0d;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #c5b358; /* Gold foil color */
+    text-shadow: 2px 2px 4px #000;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+#visualization-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.metal {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #888;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #333;
+    box-shadow: 0 0 10px #000;
+}
+
+.metal:hover {
+    transform: scale(1.1);
+    border-color: #c5b358;
+    box-shadow: 0 0 20px #c5b358;
+}
+
+.metal.paired {
+    border-color: #87ceeb;
+    box-shadow: 0 0 25px #87ceeb;
+    transform: scale(1.1);
+}
+
+#info-box {
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border: 1px solid #444;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+#info-box h2 {
+    margin-top: 0;
+    color: #c5b358;
+}
+
+footer {
+    background-color: #0d0d0d;
+    padding: 1rem;
+    text-align: center;
+    border-top: 2px solid #444;
+}
+
+footer a {
+    color: #c5b358;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #visualization-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metal {
+        width: 80px;
+        height: 80px;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
