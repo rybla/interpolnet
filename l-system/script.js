@@ -161,10 +161,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function initializeSystem(presetName) {
+        currentSystem = JSON.parse(JSON.stringify(presets[presetName]));
+        currentSystem.name = presetName;
+        currentGeneration = 0;
+        draw(currentSystem, currentSystem.axiom);
+    }
+
     function start() {
         clearTimeout(generationTimeoutId);
-        resetToPreset(lSystemSelect.value);
-
+        initializeSystem(lSystemSelect.value);
         step();
 
         function animateGenerations() {
@@ -181,14 +187,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function resetToPreset(presetName) {
-        currentSystem = JSON.parse(JSON.stringify(presets[presetName]));
-        currentSystem.name = presetName;
-        currentGeneration = 0;
-
+        initializeSystem(presetName);
         generationsSlider.value = presets[presetName].generations;
         generationsValue.textContent = generationsSlider.value;
-
-        draw(currentSystem, currentSystem.axiom);
     }
 
     speedSlider.addEventListener('input', () => {
