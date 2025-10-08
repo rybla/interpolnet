@@ -60,3 +60,8 @@ A tool for visualizing lambda calculus reductions.
 Path: `mistborn/`
 
 An interactive visualization of the Mistborn magic system (Allomancy).
+## Finite State Machine Visualizer
+
+Path: `fsm-visualizer/`
+
+A tool for visualizing finite state machines.
