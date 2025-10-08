@@ -120,32 +120,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function step() {
         if (currentInputIndex >= fsm.sequence.length) {
-            if (animationInterval) clearInterval(animationInterval);
+        if (animationInterval) {
+            clearInterval(animationInterval);
+            animationInterval = null;
+        }
             return;
         }
 
         const input = fsm.sequence[currentInputIndex];
-        const transitions = fsm.states[currentState].transitions;
+    const fromState = currentState;
+    const transitions = fsm.states[fromState].transitions;
 
-        if (transitions[input]) {
+    if (transitions && transitions[input]) {
             const toState = transitions[input];
             currentState = toState;
+
+        const edge = edges.get({
+            filter: item => item.from === fromState && item.to === toState && item.label === input
+        })[0];
+
+        if (edge) {
+            // Animate edge
+            edges.update({ id: edge.id, color: { color: '#ff0000' }, width: 4 });
+            // Animate node
+            nodes.update({ id: toState, size: 30 });
+
+            setTimeout(() => {
+                edges.update({ id: edge.id, color: { color: '#8b4513' }, width: 1 });
+                nodes.update({ id: toState, size: 25 }); // Or original size
+            }, 800);
+        }
         }
 
         currentInputIndex++;
         updateUI();
     }
 
+function resetSimulation() {
+    currentState = fsm.initial;
+    currentInputIndex = 0;
+    if (animationInterval) {
+        clearInterval(animationInterval);
+        animationInterval = null;
+    }
+    updateUI();
+}
+
     function startAnimation() {
-        if (animationInterval) clearInterval(animationInterval);
-        step(); // First step immediately
+    resetSimulation();
         animationInterval = setInterval(step, 1500);
     }
 
     fsmSelect.addEventListener('change', (e) => renderFSM(e.target.value));
     startBtn.addEventListener('click', startAnimation);
     stepBtn.addEventListener('click', () => {
-        if (animationInterval) clearInterval(animationInterval);
+    if (animationInterval) {
+        clearInterval(animationInterval);
+        animationInterval = null;
+    }
         step();
     });
 
