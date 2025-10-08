@@ -54,3 +54,9 @@ A simulation of an ant colony finding the shortest path to food using pheromones
 Path: `lambda-calculus-visualization/`
 
 A tool for visualizing lambda calculus reductions.
+
+## Mistborn Magic System
+
+Path: `mistborn/`
+
+An interactive visualization of the Mistborn magic system (Allomancy).
