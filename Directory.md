@@ -54,3 +54,9 @@ A simulation of an ant colony finding the shortest path to food using pheromones
 Path: `lambda-calculus-visualization/`
 
 A tool for visualizing lambda calculus reductions.
+
+## L-System Visualizer
+
+Path: `l-system/`
+
+A tool for visualizing the generation of L-systems with multiple presets.
