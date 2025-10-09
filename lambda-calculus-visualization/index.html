@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lambda Calculus Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html">Back to Home</a>
+        <h1>Lambda Calculus Visualization</h1>
+    </header>
+    <main>
+        <div id="visualization-container">
+            <canvas id="main-canvas"></canvas>
+        </div>
+        <div id="controls-container">
+            <div id="input-container">
+                <textarea id="lambda-input" rows="4" placeholder="Enter a lambda term..."></textarea>
+                <select id="examples-dropdown">
+                    <option value="">-- Select an Example --</option>
+                </select>
+            </div>
+            <div id="simulation-controls">
+                <button id="start-button">Start</button>
+                <button id="pause-button">Pause</button>
+                <button id="step-button">Step</button>
+                <button id="restart-button">Restart</button>
+            </div>
+            <div id="error-box"></div>
+            <div id="help-container">
+                <h2>How it works</h2>
+                <p>
+                    Enter a lambda calculus expression using De Bruijn indices.
+                    The visualization will show the reduction process in 3D.
+                </p>
+                <h3>Grammar:</h3>
+                <code>
+                    Term ::= Abstraction | Application | Variable <br>
+                    Abstraction ::= L(Term) <br>
+                    Application ::= A(Term, Term) <br>
+                    Variable ::= V(index)
+                </code>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="core.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

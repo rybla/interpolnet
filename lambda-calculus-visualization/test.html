@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lambda Calculus Core Tests</title>
+    <style>
+        body { font-family: sans-serif; }
+        .test-case { margin: 5px 0; }
+        .pass { color: green; }
+        .fail { color: red; }
+        #results { border: 1px solid #ccc; padding: 10px; }
+        h2 { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <h1>Lambda Calculus Core Test Suite</h1>
+    <div id="results"></div>
+
+    <script src="core.js"></script>
+    <script>
+        // Simple Test Runner
+        const testResults = document.getElementById('results');
+        let testsPassed = 0;
+        let testsFailed = 0;
+
+        function assert(condition, message) {
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'test-case';
+            if (condition) {
+                resultDiv.classList.add('pass');
+                resultDiv.textContent = `PASS: ${message}`;
+                testsPassed++;
+            } else {
+                resultDiv.classList.add('fail');
+                resultDiv.textContent = `FAIL: ${message}`;
+                testsFailed++;
+            }
+            testResults.appendChild(resultDiv);
+        }
+        
+        function deepEqual(a, b) {
+            return JSON.stringify(a) === JSON.stringify(b);
+        }
+
+        function runTests() {
+            // This function will be populated by tests.js
+        }
+    </script>
+    <script src="tests.js"></script>
+    <script>
+        runTests();
+        const summary = document.createElement('h2');
+        summary.textContent = `Tests Complete: ${testsPassed} passed, ${testsFailed} failed.`;
+        testResults.insertBefore(summary, testResults.firstChild);
+    </script>
+</body>
+</html>
