@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Body Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>N-Body Simulation</h1>
+    </header>
+    <main>
+        <div id="controls">
+            <div class="control-group">
+                <label for="body-count">Number of Bodies:</label>
+                <input type="range" id="body-count" min="10" max="500" value="100">
+                <span id="body-count-display">100</span>
+            </div>
+            <div class="control-group">
+                <label for="mass-variance">Mass Variance:</label>
+                <input type="range" id="mass-variance" min="0.1" max="100" step="0.1" value="1">
+                <span id="mass-variance-display">1.0</span>
+            </div>
+            <div class="control-group">
+                <label for="speed-variance">Speed Variance:</label>
+                <input type="range" id="speed-variance" min="0.1" max="10" step="0.1" value="1">
+                <span id="speed-variance-display">1.0</span>
+            </div>
+            <button id="start-button">Start</button>
+            <button id="pause-button">Pause</button>
+            <button id="reset-button">Reset</button>
+        </div>
+        <canvas id="simulation-canvas"></canvas>
+    </main>
+    <footer>
+        <p>&copy; 2025 Interpolnet. <a href="../">Back to home</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

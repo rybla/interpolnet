@@ -70,3 +70,9 @@ A tool for visualizing finite state machines.
 Path: `l-system/`
 
 A tool for visualizing the generation of L-systems with multiple presets.
+
+## N-Body Simulation
+
+Path: `n-body/`
+
+A 2D N-body simulation with configurable parameters for mass and speed distributions.
