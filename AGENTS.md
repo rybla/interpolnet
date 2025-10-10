@@ -1,6 +1,6 @@
-# Instructions for Agents
+# Instructions for Jules
 
-All autonomous AI agents must follow the instructions in this file.
+Jules must follow the instructions in this file.
 
 ## Creating a new webpage
 
@@ -22,3 +22,23 @@ If you need to use an existing Javascript library, make sure to include the appr
 ## Modifying existing webpages
 
 When modifying an existing webpage, make sure to ONLY modify, create, or delete files that are inside that webpage's subdirectory.
+
+## Verification
+
+Every time you create a new webpage or modify an existing webpage, you MUST test that webpage in order to ensure it's working properly in the browser before submitting your changes. To do this testing, run the following Python script like so, where `<webpage_name>` is the name of the webpage that you are testing.
+
+```sh
+python test_webpage.py <webpage_name>
+```
+
+For example, in order to test the webpage named `ants`, you would run the testing script like this:
+
+```sh
+python test_webpage.py ants
+```
+
+Running this script will simulate a browser in order to verify that the webpage loads and runs correctly. Then the script will take a screenshot of the webpage and save it to a local file.
+
+If this test throws any errors, then you MUST address those errors.
+
+Also, take a look at the screenshot of the webpage that the script produces. ENSURE that the screenshot visually corresponds to what the user requested.
