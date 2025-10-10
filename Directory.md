@@ -76,3 +76,9 @@ A tool for visualizing the generation of L-systems with multiple presets.
 Path: `n-body/`
 
 A 2D N-body simulation with configurable parameters for mass and speed distributions.
+
+## WebGPU Example
+
+Path: `webgpu-example/`
+
+A 3D scene rendering a reflective sphere with WebGPU, with a camera that can be rotated by clicking and dragging.
