@@ -20,13 +20,90 @@ const texture = loader.load([
 ]);
 scene.background = texture;
 
+// Dynamic Reflection
+const cubeRenderTarget = new THREE.WebGLCubeRenderTarget(256);
+const cubeCamera = new THREE.CubeCamera(1, 1000, cubeRenderTarget);
+scene.add(cubeCamera);
+
 // Reflective Sphere
 const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
-const sphereMaterial = new THREE.MeshBasicMaterial({
-    envMap: texture
+const sphereMaterial = new THREE.MeshStandardMaterial({
+    envMap: cubeRenderTarget.texture,
+    metalness: 1,
+    roughness: 0.8
 });
 const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(sphere);
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.0);
+scene.add(ambientLight);
+
+const pointLight = new THREE.PointLight(0xffffff, 20);
+pointLight.position.set(2, 2, 2);
+scene.add(pointLight);
+
+const pointLight2 = new THREE.PointLight(0xff00ff, 15);
+pointLight2.position.set(-2, -2, 2);
+scene.add(pointLight2);
+
+const pointLight3 = new THREE.PointLight(0x0000ff, 15);
+pointLight3.position.set(2, -2, -2);
+scene.add(pointLight3);
+
+const pointLight4 = new THREE.PointLight(0xff0000, 15);
+pointLight4.position.set(-2, 2, -2);
+scene.add(pointLight4);
+
+// Particle System
+const particleCount = 1000;
+const particles = new THREE.BufferGeometry();
+const positions = new Float32Array(particleCount * 3);
+const colors = new Float32Array(particleCount * 3);
+const color = new THREE.Color();
+
+for (let i = 0; i < particleCount * 3; i += 3) {
+    const radius = 3 + Math.random() * 2;
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.acos(2 * Math.random() - 1);
+
+    positions[i] = radius * Math.sin(phi) * Math.cos(theta);
+    positions[i + 1] = radius * Math.sin(phi) * Math.sin(theta);
+    positions[i + 2] = radius * Math.cos(phi);
+
+    color.setHSL(Math.random(), 0.7, 0.7);
+    colors[i] = color.r;
+    colors[i + 1] = color.g;
+    colors[i + 2] = color.b;
+}
+
+particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+particles.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+const particleMaterial = new THREE.PointsMaterial({
+    size: 0.25,
+    vertexColors: true,
+    blending: THREE.AdditiveBlending,
+    transparent: true,
+    opacity: 1.0
+});
+
+const particleSystem = new THREE.Points(particles, particleMaterial);
+const originalPositions = positions.slice();
+const particleData = [];
+
+for (let i = 0; i < particleCount; i++) {
+    particleData.push({
+        velocity: new THREE.Vector3(
+            (Math.random() - 0.5) * 0.1,
+            (Math.random() - 0.5) * 0.1,
+            (Math.random() - 0.5) * 0.1
+        ),
+        originalY: originalPositions[i * 3 + 1]
+    });
+}
+scene.add(particleSystem);
+
 
 // Mouse interaction for rotation
 let isDragging = false;
@@ -66,6 +143,42 @@ canvas.addEventListener('mouseup', () => {
 
 // Animation loop
 function animate() {
+    const time = Date.now() * 0.001;
+    const positionAttribute = particles.getAttribute('position');
+
+    for (let i = 0; i < particleCount; i++) {
+        const i3 = i * 3;
+
+        // Linear motion
+        positionAttribute.array[i3] += particleData[i].velocity.x;
+        positionAttribute.array[i3 + 1] += particleData[i].velocity.y;
+        positionAttribute.array[i3 + 2] += particleData[i].velocity.z;
+
+        // Sinusoidal oscillation
+        positionAttribute.array[i3 + 1] += Math.sin(time + i) * 0.01;
+
+
+        // Reset particles that move too far away
+        const distance = Math.sqrt(
+            positionAttribute.array[i3] ** 2 +
+            positionAttribute.array[i3 + 1] ** 2 +
+            positionAttribute.array[i3 + 2] ** 2
+        );
+
+        if (distance > 6) {
+            positionAttribute.array[i3] = originalPositions[i3];
+            positionAttribute.array[i3 + 1] = originalPositions[i3 + 1];
+            positionAttribute.array[i3 + 2] = originalPositions[i3 + 2];
+        }
+    }
+    positionAttribute.needsUpdate = true;
+
+
+    // Dynamic reflection
+    sphere.visible = false;
+    cubeCamera.update(renderer, scene);
+    sphere.visible = true;
+
     renderer.render(scene, camera);
 }
 
