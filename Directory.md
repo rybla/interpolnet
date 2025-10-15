@@ -93,3 +93,8 @@ A 3D simulation of plant growth using L-systems.
 Path: `octopus-sim/`
 
 A 2D simulation of an octopus with realistic tentacle movement.
+## Boids Simulation
+
+Path: `boids/`
+
+A 3D simulation of flocking behavior.
