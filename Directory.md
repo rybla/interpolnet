@@ -98,3 +98,9 @@ A 2D simulation of an octopus with realistic tentacle movement.
 Path: `boids/`
 
 A 3D simulation of flocking behavior.
+
+## Banana Bonanza
+
+Path: `banana-bonanza/`
+
+A game about throwing bananas at monkeys.
