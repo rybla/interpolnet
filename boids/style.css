@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    z-index: 1;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+}
+
+#controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#controls h2 {
+    margin-top: 0;
+}
+
+#controls label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#controls input {
+    width: 100%;
+}
