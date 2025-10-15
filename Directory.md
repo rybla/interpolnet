@@ -82,3 +82,9 @@ A 2D N-body simulation with configurable parameters for mass and speed distribut
 Path: `webgpu-example/`
 
 A 3D scene rendering a reflective sphere with WebGPU, with a camera that can be rotated by clicking and dragging.
+
+## Plant Growth Simulator
+
+Path: `plant-sim/`
+
+A 3D simulation of plant growth using L-systems.

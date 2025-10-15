@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Growth Simulation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../">Back to Home</a>
+      <h1>Plant Growth Simulation</h1>
+    </header>
+    <main>
+      <div class="controls">
+        <select id="simulation-select">
+          <option value="0">3D Fractal Tree</option>
+          <option value="1">3D Bush</option>
+          <option value="2">3D Spiral</option>
+          <option value="3">Weeping Willow</option>
+          <option value="4">Conifer</option>
+          <option value="5">Feathery Bush</option>
+          <option value="6">Twisted Growth</option>
+          <option value="7">Coral-like Structure</option>
+          <option value="8">Complex Flower</option>
+          <option value="9">Spiral Fern</option>
+          <option value="10">Crystal Formation</option>
+          <option value="11">Sea Anemone</option>
+          <option value="12">Dragon Tree</option>
+          <option value="13">Windswept Tree</option>
+          <option value="14">Alien Plant</option>
+        </select>
+        <button id="start-button">Start</button>
+        <button id="step-button">Step</button>
+        <button id="pause-button">Pause</button>
+        <button id="reset-button">Reset</button>
+      </div>
+      <canvas id="main-canvas"></canvas>
+    </main>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
