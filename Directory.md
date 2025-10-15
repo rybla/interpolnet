@@ -88,3 +88,8 @@ A 3D scene rendering a reflective sphere with WebGPU, with a camera that can be 
 Path: `plant-sim/`
 
 A 3D simulation of plant growth using L-systems.
+## Octopus Simulator
+
+Path: `octopus-sim/`
+
+A 2D simulation of an octopus with realistic tentacle movement.
