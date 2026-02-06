@@ -98,3 +98,9 @@ A 2D simulation of an octopus with realistic tentacle movement.
 Path: `boids/`
 
 A 3D simulation of flocking behavior.
+
+## Fourier Drawing
+
+Path: `fourier-drawing/`
+
+An interactive visualization where you draw a path and the computer reconstructs it using Fourier epicycles.
