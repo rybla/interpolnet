@@ -103,6 +103,12 @@ input[type="range"] {
     width: 150px;
 }
 
+#epicycles-count {
+  display: inline-block;
+  width: 30px;
+  text-align: right;
+}
+
 .instructions {
     text-align: center;
     color: #aaa;
