@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fourier Drawing - Interpolnet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="../" class="back-link">← Back to Home</a>
+        <h1>Fourier Drawing</h1>
+      </header>
+      <main>
+        <div class="canvas-container">
+          <canvas id="canvas"></canvas>
+          <div class="controls">
+            <div class="control-group">
+                <button id="draw-btn" class="active">Draw</button>
+                <button id="animate-btn" disabled>Animate</button>
+                <button id="clear-btn">Clear</button>
+            </div>
+            <div class="control-group">
+                <label for="epicycles-slider">Epicycles: <span id="epicycles-count">0</span></label>
+                <input type="range" id="epicycles-slider" min="1" max="100" value="1" disabled>
+            </div>
+          </div>
+          <p class="instructions">Click "Draw" and trace a continuous loop on the canvas. Then click "Animate".</p>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
