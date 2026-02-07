@@ -1,0 +1,100 @@
+body {
+    background-color: #111;
+    color: #eee;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 0 #555;
+}
+
+.back-link {
+    color: #00ff00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.game-container {
+    position: relative;
+    border: 4px solid #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+canvas {
+    display: block;
+    background-color: #000;
+    width: 640px;
+    height: 480px;
+    image-rendering: pixelated; /* Essential for that retro look */
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#overlay p {
+    font-size: 2rem;
+    color: #00ff00;
+    margin: 10px;
+    text-shadow: 0 0 10px #00ff00;
+    animation: blink 1s infinite;
+}
+
+.controls {
+    font-size: 1rem !important;
+    color: #ccc !important;
+    animation: none !important;
+    margin-top: 20px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.info {
+    max-width: 640px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
