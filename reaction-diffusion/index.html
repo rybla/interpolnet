@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction-Diffusion Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="../" class="back-link">&larr; Back to Home</a>
+        <h1>Reaction-Diffusion Simulator</h1>
+    </header>
+    <main>
+        <div class="canvas-container">
+            <canvas id="sim-canvas"></canvas>
+            <div id="controls">
+                <h3>Controls</h3>
+                <div class="control-group">
+                    <label for="preset-select">Preset:</label>
+                    <select id="preset-select">
+                        <option value="default">Default</option>
+                        <option value="soliton">Soliton</option>
+                        <option value="worms">Worms</option>
+                        <option value="mazes">Mazes</option>
+                        <option value="holes">Holes</option>
+                        <option value="chaos">Chaos</option>
+                        <option value="moving-spots">Moving Spots</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="feed-rate">Feed Rate (f):</label>
+                    <input type="range" id="feed-rate" min="0.01" max="0.1" step="0.0001" value="0.055">
+                    <span id="feed-display">0.0550</span>
+                </div>
+                <div class="control-group">
+                    <label for="kill-rate">Kill Rate (k):</label>
+                    <input type="range" id="kill-rate" min="0.045" max="0.07" step="0.0001" value="0.062">
+                    <span id="kill-display">0.0620</span>
+                </div>
+                <div class="control-group">
+                    <label for="speed-control">Speed:</label>
+                    <input type="range" id="speed-control" min="1" max="50" step="1" value="10">
+                    <span id="speed-display">10x</span>
+                </div>
+                <div class="button-group">
+                    <button id="reset-btn">Reset</button>
+                    <button id="clear-btn">Clear</button>
+                </div>
+                <p class="instruction">Click and drag on canvas to add chemicals.</p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

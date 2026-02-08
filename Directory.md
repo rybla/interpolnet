@@ -104,3 +104,9 @@ A 3D simulation of flocking behavior.
 Path: `fourier-drawing/`
 
 An interactive visualization where you draw a path and the computer reconstructs it using Fourier epicycles.
+
+## Reaction Diffusion Simulator
+
+Path: `reaction-diffusion/`
+
+A simulation of the Gray-Scott reaction-diffusion model, producing organic, life-like patterns.
