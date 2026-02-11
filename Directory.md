@@ -110,3 +110,9 @@ An interactive visualization where you draw a path and the computer reconstructs
 Path: `reaction-diffusion/`
 
 A simulation of the Gray-Scott reaction-diffusion model, producing organic, life-like patterns.
+
+## Sorting Algorithm Visualizer
+
+Path: `sorting-visualizer/`
+
+A visualizer for sorting algorithms like Bubble, Selection, Insertion, Merge, and Quick Sort, with sound effects.
