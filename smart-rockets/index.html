@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Rockets</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to Index</a>
+        <h1>Smart Rockets</h1>
+        <p>A genetic algorithm simulation where rockets evolve to reach a target.</p>
+
+        <div class="controls">
+            <div class="stats">
+                <p>Generation: <span id="gen-count">0</span></p>
+                <p>Success Rate: <span id="success-rate">0%</span></p>
+            </div>
+
+            <div class="control-group">
+                <label for="pop-size">Population Size: <span id="pop-size-val">100</span></label>
+                <input type="range" id="pop-size" min="10" max="500" value="100" step="10">
+            </div>
+
+            <div class="control-group">
+                <label for="mutation-rate">Mutation Rate: <span id="mutation-rate-val">0.01</span></label>
+                <input type="range" id="mutation-rate" min="0" max="0.1" value="0.01" step="0.001">
+            </div>
+
+            <div class="control-group">
+                <label for="lifespan">Lifespan (frames): <span id="lifespan-val">400</span></label>
+                <input type="range" id="lifespan" min="100" max="1000" value="400" step="50">
+            </div>
+
+            <button id="reset-btn">Reset Simulation</button>
+        </div>
+
+        <canvas id="simulation-canvas"></canvas>
+    </div>
+</body>
+</html>
