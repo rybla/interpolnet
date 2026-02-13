@@ -134,3 +134,10 @@ Path: `smart-rockets/`
 
 A genetic algorithm simulation where a population of rockets evolves to navigate
 around obstacles and reach a target.
+
+## Kaleidoscope Painter
+
+Path: `kaleidoscope-painter/`
+
+A creative tool for drawing with rotational symmetry to create kaleidoscope-like
+patterns.
