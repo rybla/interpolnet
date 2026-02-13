@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaleidoscope Painter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        <h1>Kaleidoscope Painter</h1>
+    </header>
+    <main>
+        <div class="controls-container">
+            <div class="control-group">
+                <label for="segments">Segments:</label>
+                <input type="range" id="segments" min="2" max="24" value="12">
+                <span id="segments-val">12</span>
+            </div>
+            <div class="control-group">
+                <label for="color">Color:</label>
+                <input type="color" id="color" value="#00ffcc">
+            </div>
+             <div class="control-group">
+                <label for="size">Brush Size:</label>
+                <input type="range" id="size" min="1" max="50" value="5">
+                <span id="size-val">5</span>
+            </div>
+            <div class="control-group">
+                <label for="rainbow">Rainbow Mode:</label>
+                <input type="checkbox" id="rainbow">
+            </div>
+            <div class="control-group buttons">
+                <button id="clear-btn">Clear</button>
+                <button id="save-btn">Save Image</button>
+            </div>
+        </div>
+        <div class="canvas-wrapper">
+            <canvas id="canvas"></canvas>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
