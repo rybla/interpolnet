@@ -1,0 +1,243 @@
+:root {
+    --bg-color: #121212;
+    --grid-bg: #1e1e1e;
+    --primary-color: #00ffcc;
+    --secondary-color: #ff00ff;
+    --accent-color: #ffff00;
+    --text-color: #ffffff;
+    --inactive-pad: #333;
+    --active-pad: #00ffcc;
+    --playing-pad: #ff00ff;
+    --border-radius: 4px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    background: var(--grid-bg);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+    border: 1px solid #333;
+}
+
+header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.back-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+.controls-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #111;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    border: 1px solid #333;
+}
+
+.control-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    border-radius: var(--border-radius);
+}
+
+.control-btn:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.control-btn.active {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.control-btn.secondary {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.control-btn.secondary:hover {
+    background: var(--secondary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background: #333;
+    height: 6px;
+    border-radius: 3px;
+    width: 150px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+.sequencer-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Handle smaller screens */
+    padding-bottom: 10px;
+}
+
+.track-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 80px;
+    padding-top: 5px; /* Align roughly with pads */
+}
+
+.label {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 6px;
+    flex-grow: 1;
+}
+
+.pad {
+    width: 30px;
+    height: 40px;
+    background-color: var(--inactive-pad);
+    border: 1px solid #444;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.pad:hover {
+    background-color: #444;
+}
+
+.pad.active {
+    background-color: var(--active-pad);
+    box-shadow: 0 0 8px var(--active-pad);
+    border-color: var(--active-pad);
+}
+
+/* Playing state styling */
+.pad.playing {
+    border-color: var(--text-color);
+    transform: scale(0.95);
+}
+
+.pad.active.playing {
+    background-color: var(--playing-pad);
+    box-shadow: 0 0 12px var(--playing-pad);
+    border-color: var(--playing-pad);
+}
+
+/* Beat markers */
+.grid .pad:nth-child(4n+1) {
+    border-left: 1px solid #666; /* Mild separation for beat start */
+}
+
+.instructions {
+    text-align: center;
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .grid {
+        gap: 4px;
+    }
+
+    .pad {
+        width: 20px;
+        height: 30px;
+    }
+
+    .label {
+        height: 30px;
+        font-size: 0.7rem;
+    }
+
+    .controls-top {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
