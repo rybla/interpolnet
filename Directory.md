@@ -141,3 +141,9 @@ Path: `kaleidoscope-painter/`
 
 A creative tool for drawing with rotational symmetry to create kaleidoscope-like
 patterns.
+
+## Retro Beat Maker
+
+Path: `beat-maker/`
+
+A browser-based step sequencer for creating drum beats with synthesized sounds.
