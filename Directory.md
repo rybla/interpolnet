@@ -147,3 +147,10 @@ patterns.
 Path: `beat-maker/`
 
 A browser-based step sequencer for creating drum beats with synthesized sounds.
+
+## Maze Generator & Solver
+
+Path: `maze-generator/`
+
+A web app that generates mazes using a recursive backtracker and solves them
+using A\* pathfinding.
