@@ -154,3 +154,9 @@ Path: `maze-generator/`
 
 A web app that generates mazes using a recursive backtracker and solves them
 using A\* pathfinding.
+
+## Fluid Simulation
+
+Path: `fluid-simulation/`
+
+A real-time, interactive fluid dynamics simulation running on the GPU using WebGL.

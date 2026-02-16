@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Back to Index</a>
+    <canvas id="canvas"></canvas>
+
+    <div class="controls">
+        <h1>Fluid Simulation</h1>
+        <p>Drag to interact with the fluid.</p>
+
+        <div class="control-group">
+            <label for="curl">Curl</label>
+            <input type="range" id="curl" min="0" max="50" value="30">
+        </div>
+        <div class="control-group">
+            <label for="density-dissipation">Density Dissipation</label>
+            <input type="range" id="density-dissipation" min="0.9" max="1.0" step="0.001" value="0.97">
+        </div>
+        <div class="control-group">
+            <label for="velocity-dissipation">Velocity Dissipation</label>
+            <input type="range" id="velocity-dissipation" min="0.9" max="1.0" step="0.001" value="0.98">
+        </div>
+
+        <button id="reset">Reset</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
