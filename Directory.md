@@ -166,3 +166,9 @@ A real-time, interactive fluid dynamics simulation running on the GPU using WebG
 Path: `double-pendulum/`
 
 A simulation of the chaotic behavior of a double pendulum system, demonstrating sensitive dependence on initial conditions.
+
+## Bézier Curve Visualizer
+
+Path: `bezier-visualizer/`
+
+An interactive visualization of Bézier curves using De Casteljau's algorithm.
