@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpolnet | Bézier Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bézier Curve Visualizer</h1>
+            <p class="subtitle">Interactive visualization of De Casteljau's algorithm</p>
+            <a href="../index.html" class="back-link">← Back to Index</a>
+        </header>
+
+        <main>
+            <div class="canvas-wrapper">
+                <canvas id="canvas"></canvas>
+                <div class="overlay-controls">
+                    <div class="control-group">
+                        <label>Degree:</label>
+                        <div class="btn-group">
+                            <button id="btn-linear" class="active">Linear (1)</button>
+                            <button id="btn-quadratic">Quadratic (2)</button>
+                            <button id="btn-cubic">Cubic (3)</button>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Display:</label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="chk-construction" checked> Construction Lines
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="chk-curve" checked> The Curve
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="chk-points" checked> Control Points
+                        </label>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Animation (t):</label>
+                        <div class="slider-container">
+                            <input type="range" id="t-slider" min="0" max="1" step="0.001" value="0.5">
+                            <span id="t-value">0.50</span>
+                        </div>
+                        <button id="btn-animate">Play Animation</button>
+                    </div>
+
+                    <div class="instructions">
+                        <p>Drag the points to shape the curve.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Interpolnet</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
