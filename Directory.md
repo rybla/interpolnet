@@ -172,3 +172,9 @@ A simulation of the chaotic behavior of a double pendulum system, demonstrating 
 Path: `bezier-visualizer/`
 
 An interactive visualization of Bézier curves using De Casteljau's algorithm.
+
+## Neural Network Visualizer
+
+Path: `neural-network-visualizer/`
+
+A simple interactive visualizer for a single-layer Perceptron learning to classify 2D points.
