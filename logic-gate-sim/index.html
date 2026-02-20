@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Logic Sim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="../index.html" class="back-link">&larr; Back to Index</a>
+            <h1>Digital Logic Sim</h1>
+            <div class="controls">
+                <button id="clear-btn">Clear Board</button>
+            </div>
+        </header>
+        <main>
+            <div class="toolbar">
+                <div class="component-icon" data-type="AND" draggable="true" title="AND Gate">AND</div>
+                <div class="component-icon" data-type="OR" draggable="true" title="OR Gate">OR</div>
+                <div class="component-icon" data-type="NOT" draggable="true" title="NOT Gate">NOT</div>
+                <div class="component-icon" data-type="XOR" draggable="true" title="XOR Gate">XOR</div>
+                <div class="component-icon" data-type="SWITCH" draggable="true" title="Input Switch">SW</div>
+                <div class="component-icon" data-type="BULB" draggable="true" title="Output Light">LGT</div>
+            </div>
+            <div class="canvas-wrapper">
+                <canvas id="sim-canvas"></canvas>
+            </div>
+        </main>
+        <div class="instructions">
+            <p><strong>Controls:</strong> Drag components from the left bar. Drag from Output (Right) to Input (Left) to wire. Click Switches to toggle. Right-Click component/wire to delete.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

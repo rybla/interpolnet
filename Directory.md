@@ -178,3 +178,9 @@ An interactive visualization of Bézier curves using De Casteljau's algorithm.
 Path: `neural-network-visualizer/`
 
 A simple interactive visualizer for a single-layer Perceptron learning to classify 2D points.
+
+## Digital Logic Sim
+
+Path: `logic-gate-sim/`
+
+A digital logic circuit simulator where users can build and simulate circuits using logic gates, switches, and lights.
