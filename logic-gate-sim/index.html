@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Gate Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../index.html" class="back-link">← Back to Index</a>
+            <h1>Logic Gate Simulator</h1>
+        </header>
+        <main>
+            <div class="toolbar">
+                <div class="tool-group">
+                    <h3>Gates</h3>
+                    <div class="tool" draggable="true" data-type="AND">AND</div>
+                    <div class="tool" draggable="true" data-type="OR">OR</div>
+                    <div class="tool" draggable="true" data-type="NOT">NOT</div>
+                    <div class="tool" draggable="true" data-type="XOR">XOR</div>
+                    <div class="tool" draggable="true" data-type="NAND">NAND</div>
+                </div>
+                <div class="tool-group">
+                    <h3>I/O</h3>
+                    <div class="tool" draggable="true" data-type="SWITCH">Switch</div>
+                    <div class="tool" draggable="true" data-type="LAMP">Lamp</div>
+                </div>
+                <div class="tool-group">
+                    <h3>Controls</h3>
+                    <button id="clear-btn">Clear All</button>
+                    <p class="instructions">Drag components to canvas. <br> Drag from pin to pin to wire. <br> Click switch to toggle.</p>
+                </div>
+            </div>
+            <div class="canvas-container">
+                <canvas id="circuit-canvas"></canvas>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
