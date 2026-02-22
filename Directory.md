@@ -178,3 +178,9 @@ An interactive visualization of Bézier curves using De Casteljau's algorithm.
 Path: `neural-network-visualizer/`
 
 A simple interactive visualizer for a single-layer Perceptron learning to classify 2D points.
+
+## ASCII Art Converter
+
+Path: `ascii-art-converter/`
+
+A tool for converting images and webcam feeds into ASCII art.
