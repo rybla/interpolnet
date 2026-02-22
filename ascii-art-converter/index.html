@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="back-link">&larr; Back to Interpolnet</a>
+        <h1>ASCII Art Converter</h1>
+    </header>
+    <main>
+        <div class="controls">
+            <div class="control-group">
+                <label for="image-upload" class="upload-btn">Upload Image</label>
+                <input type="file" id="image-upload" accept="image/*">
+            </div>
+            <div class="control-group">
+                <button id="webcam-btn">Start Webcam</button>
+            </div>
+            <div class="control-group">
+                <label for="resolution">Resolution (Width): <span id="res-val">100</span></label>
+                <input type="range" id="resolution" min="20" max="300" value="100">
+            </div>
+            <div class="control-group">
+                <label for="density">Density String:</label>
+                <input type="text" id="density" value="Ñ@#W$9876543210?!abc;:+=-,._ ">
+            </div>
+            <div class="control-group checkbox-group">
+                <input type="checkbox" id="invert">
+                <label for="invert">Invert Colors</label>
+            </div>
+        </div>
+        <div class="output-container">
+            <pre id="ascii-output">
+  __  __     ______     __         __         ______
+ /\ \_\ \   /\  ___\   /\ \       /\ \       /\  __ \
+ \ \  __ \  \ \  __\   \ \ \____  \ \ \____  \ \ \/\ \
+  \ \_\ \_\  \ \_____\  \ \_____\  \ \_____\  \ \_____\
+   \/_/\/_/   \/_____/   \/_____/   \/_____/   \/_____/
+
+            Wait for camera or upload an image...
+            </pre>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
