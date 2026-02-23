@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PID Controller Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="../index.html" class="back-link">&larr; Back to Home</a>
+            <h1>PID Controller Visualizer</h1>
+            <p>Adjust P, I, D values to stabilize the drone at the target altitude.</p>
+        </header>
+
+        <main>
+            <div class="visualization-container">
+                <canvas id="sim-canvas"></canvas>
+                <canvas id="graph-canvas"></canvas>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="kp">Proportional (Kp): <span id="kp-val">1.0</span></label>
+                    <input type="range" id="kp" min="0" max="10" step="0.1" value="1.0">
+                </div>
+                <div class="control-group">
+                    <label for="ki">Integral (Ki): <span id="ki-val">0.0</span></label>
+                    <input type="range" id="ki" min="0" max="2" step="0.01" value="0.0">
+                </div>
+                <div class="control-group">
+                    <label for="kd">Derivative (Kd): <span id="kd-val">0.0</span></label>
+                    <input type="range" id="kd" min="0" max="10" step="0.1" value="0.0">
+                </div>
+                <div class="control-group">
+                    <label for="setpoint">Target Altitude: <span id="setpoint-val">50</span>%</label>
+                    <input type="range" id="setpoint" min="10" max="90" step="1" value="50">
+                </div>
+                <div class="button-group">
+                    <button id="reset-btn">Reset</button>
+                    <button id="disturbance-btn">Add Wind Gust</button>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h3>How to use:</h3>
+                <ul>
+                    <li><strong>Proportional (Kp):</strong> Increases thrust based on distance to target. High values cause oscillation.</li>
+                    <li><strong>Integral (Ki):</strong> Accumulates error over time. Helps eliminate steady-state error (droop) caused by gravity.</li>
+                    <li><strong>Derivative (Kd):</strong> Reacts to rate of change. Dampens oscillations.</li>
+                </ul>
+                <p>Try setting Ki and Kd to 0, then increase Kp until it oscillates. Then add Kd to stop oscillation. Finally add Ki to reach the exact target.</p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
