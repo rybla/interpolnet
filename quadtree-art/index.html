@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadtree Image Compression</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../index.html" class="back-link">← Back to Interpolnet</a>
+            <h1>Quadtree Image Compression</h1>
+        </header>
+
+        <main>
+            <div class="canvas-wrapper">
+                <canvas id="canvas"></canvas>
+                <div id="loading" class="hidden">Processing...</div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group file-upload">
+                    <label for="imageInput" class="btn">Upload Image</label>
+                    <input type="file" id="imageInput" accept="image/*">
+                </div>
+
+                <div class="control-group slider-group">
+                    <label for="threshold">Threshold: <span id="thresholdValue">20</span></label>
+                    <input type="range" id="threshold" min="0" max="255" value="20">
+                </div>
+
+                <div class="control-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="showLines">
+                        <span class="checkmark"></span>
+                        Show Grid
+                    </label>
+                </div>
+
+                <div class="stats">
+                    <span>Nodes: <span id="nodeCount">0</span></span>
+                </div>
+            </div>
+
+            <p class="instructions">Drag and drop an image onto the page or use the upload button.</p>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
