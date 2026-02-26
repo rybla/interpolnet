@@ -178,3 +178,9 @@ An interactive visualization of Bézier curves using De Casteljau's algorithm.
 Path: `neural-network-visualizer/`
 
 A simple interactive visualizer for a single-layer Perceptron learning to classify 2D points.
+
+## Quadtree Image Compression
+
+Path: `quadtree-art/`
+
+An interactive tool for image compression using recursive quadtree decomposition based on color variance.

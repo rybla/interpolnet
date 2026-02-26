@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadtree Image Compression - Interpolnet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="../" class="back-link">&larr; Back to Index</a>
+        <h1>Quadtree Image Compression</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="canvas-wrapper" id="drop-zone">
+                <canvas id="canvas"></canvas>
+                <div class="overlay" id="overlay">
+                    <div class="icon">📁</div>
+                    <p>Drag & Drop an Image Here</p>
+                    <p class="subtitle">or click to upload</p>
+                    <input type="file" id="file-input" accept="image/*" hidden>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="threshold">Error Threshold</label>
+                    <div class="slider-row">
+                        <input type="range" id="threshold" min="0" max="100" value="20" step="1">
+                        <span id="threshold-val">20</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label for="max-depth">Max Depth</label>
+                    <div class="slider-row">
+                        <input type="range" id="max-depth" min="1" max="12" value="8" step="1">
+                        <span id="max-depth-val">8</span>
+                    </div>
+                </div>
+
+                <div class="control-group checkbox">
+                    <input type="checkbox" id="show-grid">
+                    <label for="show-grid">Show Grid Lines</label>
+                </div>
+
+                 <div class="control-group checkbox">
+                    <input type="checkbox" id="fill-rects" checked>
+                    <label for="fill-rects">Fill Rectangles</label>
+                </div>
+
+                <div class="stats">
+                    <p>Original Pixels: <span id="pixel-count">0</span></p>
+                    <p>Quadtree Nodes: <span id="node-count">0</span></p>
+                    <p>Compression Ratio: <span id="compression-ratio">N/A</span></p>
+                </div>
+
+                <button id="export-btn" disabled>Export Image</button>
+            </div>
+        </div>
+
+        <div class="info">
+            <p>
+                This demonstration uses a <strong>Quadtree</strong> data structure to recursively subdivide an image based on color variance.
+                Regions with high detail (high variance) are split into smaller quadrants, while uniform regions are kept as large blocks.
+                This is a form of lossy image compression.
+            </p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
