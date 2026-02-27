@@ -178,3 +178,9 @@ An interactive visualization of Bézier curves using De Casteljau's algorithm.
 Path: `neural-network-visualizer/`
 
 A simple interactive visualizer for a single-layer Perceptron learning to classify 2D points.
+
+## PID Controller Visualizer
+
+Path: `pid-controller/`
+
+A visualization of a PID control loop stabilizing a 1D drone simulation.

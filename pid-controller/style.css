@@ -1,0 +1,148 @@
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --accent-color: #00bcd4;
+    --secondary-bg: #2d2d2d;
+    --border-color: #404040;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-link {
+    align-self: flex-start;
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.visualization-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    width: 100%;
+}
+
+canvas {
+    background-color: #000;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    cursor: crosshair;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.control-group label {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.control-group span {
+    color: var(--accent-color);
+    font-family: monospace;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #444;
+    border-radius: 3px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+}
+
+button {
+    background-color: var(--accent-color);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #00acc1;
+}
+
+@media (min-width: 768px) {
+    .controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    #reset-btn {
+        grid-column: 1 / -1;
+    }
+}
