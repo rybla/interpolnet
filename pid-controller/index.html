@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PID Controller Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to Index</a>
+        <h1>PID Controller Visualizer</h1>
+        <p class="description">Tune the PID values to stabilize the drone at the target height.</p>
+
+        <div class="visualization-container">
+            <canvas id="sim-canvas"></canvas>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="kp">Proportional (Kp): <span id="kp-val">0.0</span></label>
+                    <input type="range" id="kp" min="0" max="1" step="0.01" value="0.0">
+                </div>
+                <div class="control-group">
+                    <label for="ki">Integral (Ki): <span id="ki-val">0.0</span></label>
+                    <input type="range" id="ki" min="0" max="0.1" step="0.001" value="0.0">
+                </div>
+                <div class="control-group">
+                    <label for="kd">Derivative (Kd): <span id="kd-val">0.0</span></label>
+                    <input type="range" id="kd" min="0" max="50" step="0.1" value="0.0">
+                </div>
+                <div class="control-group">
+                    <label for="setpoint">Target Height: <span id="setpoint-val">300</span></label>
+                    <input type="range" id="setpoint" min="50" max="550" step="10" value="300">
+                </div>
+                <button id="reset-btn">Reset Simulation</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
