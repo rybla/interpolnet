@@ -178,3 +178,9 @@ An interactive visualization of Bézier curves using De Casteljau's algorithm.
 Path: `neural-network-visualizer/`
 
 A simple interactive visualizer for a single-layer Perceptron learning to classify 2D points.
+
+## Turing Machine Simulator
+
+Path: `turing-machine-simulator/`
+
+A simulator for a Turing Machine, visualizing the tape, head, and state transitions.
