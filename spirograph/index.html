@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spirograph</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <a href="../" id="back-link">← Back to Index</a>
+        <div id="controls-panel">
+            <h1>Spirograph</h1>
+
+            <div class="control-group">
+                <label for="typeSelect">Curve Type</label>
+                <select id="typeSelect">
+                    <option value="hypotrochoid">Hypotrochoid</option>
+                    <option value="epitrochoid">Epitrochoid</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="fixedRadius">Fixed Circle Radius (R): <span id="rVal">100</span></label>
+                <input type="range" id="fixedRadius" min="10" max="300" value="100">
+            </div>
+
+            <div class="control-group">
+                <label for="movingRadius">Moving Circle Radius (r): <span id="mrVal">40</span></label>
+                <input type="range" id="movingRadius" min="1" max="200" value="40">
+            </div>
+
+            <div class="control-group">
+                <label for="penOffset">Pen Offset (d): <span id="dVal">60</span></label>
+                <input type="range" id="penOffset" min="10" max="300" value="60">
+            </div>
+
+            <div class="control-group">
+                <label for="colorPicker">Color</label>
+                <input type="color" id="colorPicker" value="#ff0080">
+            </div>
+
+            <button id="drawBtn">Draw</button>
+            <button id="clearBtn">Clear</button>
+        </div>
+
+        <div id="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+</body>
+</html>
