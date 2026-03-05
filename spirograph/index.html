@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interpolnet | Spirograph Visualizer</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../index.html" class="back-link">← Back to Home</a>
+      <h1>Spirograph Visualizer</h1>
+    </header>
+    <main>
+      <div class="controls">
+        <div class="control-group">
+          <label for="R-slider">Fixed Circle Radius (R): <span id="R-val">100</span></label>
+          <input type="range" id="R-slider" min="10" max="200" value="100" />
+        </div>
+        <div class="control-group">
+          <label for="r-slider">Moving Circle Radius (r): <span id="r-val">30</span></label>
+          <input type="range" id="r-slider" min="10" max="200" value="30" />
+        </div>
+        <div class="control-group">
+          <label for="d-slider">Pen Offset (d): <span id="d-val">40</span></label>
+          <input type="range" id="d-slider" min="10" max="200" value="40" />
+        </div>
+        <div class="control-group">
+          <label for="color-picker">Pen Color:</label>
+          <input type="color" id="color-picker" value="#ffffff" />
+        </div>
+        <div class="control-group">
+          <label for="speed-slider">Speed: <span id="speed-val">5</span></label>
+          <input type="range" id="speed-slider" min="1" max="20" value="5" />
+        </div>
+        <div class="control-group">
+          <label for="type-select">Curve Type:</label>
+          <select id="type-select">
+            <option value="hypotrochoid">Hypotrochoid (Inside)</option>
+            <option value="epitrochoid">Epitrochoid (Outside)</option>
+          </select>
+        </div>
+        <button id="draw-btn">Redraw</button>
+        <button id="clear-btn">Clear Canvas</button>
+      </div>
+      <div class="canvas-container">
+        <canvas id="spirograph-canvas"></canvas>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Interpolnet</p>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
