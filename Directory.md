@@ -178,3 +178,9 @@ An interactive visualization of Bézier curves using De Casteljau's algorithm.
 Path: `neural-network-visualizer/`
 
 A simple interactive visualizer for a single-layer Perceptron learning to classify 2D points.
+
+## Spirograph Visualizer
+
+Path: `spirograph/`
+
+A mathematical graphics visualization where users can tweak the fixed circle radius, moving circle radius, and pen offset to draw intricate hypotrochoids and epitrochoids on an HTML5 canvas.

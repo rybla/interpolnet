@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spirograph Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="nav">
+    <a href="../index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+
+  <div class="app-container">
+    <div class="controls">
+      <h1>Spirograph Visualizer</h1>
+      <p>Adjust the parameters to draw hypotrochoids and epitrochoids.</p>
+
+      <div class="control-group">
+        <label for="fixed-radius">Fixed Circle Radius (R): <span id="r-val">100</span></label>
+        <input type="range" id="fixed-radius" min="10" max="250" value="100">
+      </div>
+
+      <div class="control-group">
+        <label for="moving-radius">Moving Circle Radius (r): <span id="r-small-val">30</span></label>
+        <input type="range" id="moving-radius" min="10" max="250" value="30">
+      </div>
+
+      <div class="control-group">
+        <label for="pen-offset">Pen Offset (d): <span id="d-val">50</span></label>
+        <input type="range" id="pen-offset" min="0" max="250" value="50">
+      </div>
+
+      <div class="control-group">
+        <label for="drawing-speed">Drawing Speed: <span id="speed-val">10</span></label>
+        <input type="range" id="drawing-speed" min="1" max="100" value="10">
+      </div>
+
+      <div class="control-group">
+        <label for="color">Pen Color:</label>
+        <input type="color" id="color" value="#ff0055">
+      </div>
+
+      <div class="control-group toggle-group">
+        <label>Drawing Type:</label>
+        <div class="toggle-buttons">
+          <button id="type-hypo" class="active">Hypotrochoid (Inner)</button>
+          <button id="type-epi">Epitrochoid (Outer)</button>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="btn-draw">Draw</button>
+        <button id="btn-clear">Clear</button>
+      </div>
+
+      <div class="info">
+        <h3>How it works</h3>
+        <p><strong>Hypotrochoid:</strong> A curve traced by a point attached to a circle of radius <em>r</em> rolling around the inside of a fixed circle of radius <em>R</em>, where the point is at a distance <em>d</em> from the center of the interior circle.</p>
+        <p><strong>Epitrochoid:</strong> A curve traced by a point attached to a circle of radius <em>r</em> rolling around the outside of a fixed circle of radius <em>R</em>, where the point is at a distance <em>d</em> from the center of the exterior circle.</p>
+      </div>
+    </div>
+
+    <div class="canvas-container">
+      <canvas id="spirograph-canvas"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
